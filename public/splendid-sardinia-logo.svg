@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" role="img" aria-labelledby="title desc">
+  <title id="title">Splendid Sardinia</title>
+  <desc id="desc">Gold SS monogram with Splendid Sardinia wordmark and luxury experiences tagline.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0d28b"/>
+      <stop offset="0.48" stop-color="#c89b3c"/>
+      <stop offset="1" stop-color="#9f7428"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#gold)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M86 24c-13-12-45-11-55 8-11 20 11 31 31 36 22 6 36 14 31 31-5 17-31 25-52 14-11-6-17-15-20-25"/>
+    <path d="M41 26c12-13 43-14 56 2 13 17-4 31-25 38-22 8-35 17-29 34 6 18 34 23 54 8 10-7 15-17 17-27"/>
+    <path d="M28 72h76" opacity=".7"/>
+  </g>
+  <text x="142" y="64" fill="#f8f4eb" font-family="Georgia, 'Times New Roman', serif" font-size="48" letter-spacing="6">SPLENDID</text>
+  <text x="142" y="113" fill="#f8f4eb" font-family="Georgia, 'Times New Roman', serif" font-size="48" letter-spacing="6">SARDINIA</text>
+  <text x="146" y="139" fill="#c8a86b" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="6">YOUR LUXURY TRAVEL EXPERIENCE</text>
+</svg>
