@@ -6,8 +6,10 @@ const experiences = [
   },
   {
     title: "Private Chauffeur",
-    text: "Travel across Sardinia in complete comfort with discreet, professional and fully tailored chauffeur service.",
+    text: "Travel across Sardinia aboard a black Mercedes-Benz S-Class with discreet, professional and fully tailored chauffeur service.",
     label: "Move in style",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/6/6b/Mercedes-Benz_S-Class_W223_black.jpg",
   },
   {
     title: "Luxury Villas",
@@ -21,13 +23,22 @@ const experiences = [
   },
 ];
 
+const logoStyle = {
+  display: "block",
+  width: "clamp(250px, 26vw, 390px)",
+  height: "auto",
+} as const;
+
 export default function Home() {
   return (
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Splendid Sardinia home">
-          <span className="brand-name">Splendid Sardinia</span>
-          <span className="brand-tagline">Your Luxury Travel Experience</span>
+          <img
+            src="/splendid-sardinia-logo.svg"
+            alt="Splendid Sardinia — Your Luxury Travel Experience"
+            style={logoStyle}
+          />
         </a>
 
         <nav className="desktop-nav" aria-label="Main navigation">
@@ -80,7 +91,18 @@ export default function Home() {
 
         <div className="experience-grid">
           {experiences.map((experience, index) => (
-            <article className={`experience-card card-${index + 1}`} key={experience.title}>
+            <article
+              className={`experience-card card-${index + 1}`}
+              key={experience.title}
+              style={
+                experience.image
+                  ? {
+                      backgroundImage: `linear-gradient(180deg, rgba(3, 12, 18, 0.02) 10%, rgba(3, 12, 18, 0.28) 100%), url("${experience.image}")`,
+                      backgroundPosition: "center 58%",
+                    }
+                  : undefined
+              }
+            >
               <div className="card-shade" />
               <div className="card-content">
                 <span>0{index + 1}</span>
@@ -149,8 +171,11 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="footer-brand">
-          <span className="brand-name">Splendid Sardinia</span>
-          <span className="brand-tagline">Your Luxury Travel Experience</span>
+          <img
+            src="/splendid-sardinia-logo.svg"
+            alt="Splendid Sardinia"
+            style={{ ...logoStyle, width: "clamp(220px, 22vw, 330px)" }}
+          />
         </div>
         <div className="footer-links">
           <a href="#experiences">Experiences</a>
@@ -158,7 +183,10 @@ export default function Home() {
           <a href="#destinations">Destinations</a>
           <a href="#contact">Contact</a>
         </div>
-        <p>© 2026 Splendid Sardinia. All rights reserved.</p>
+        <p>
+          © 2026 Splendid Sardinia. All rights reserved.<br />
+          Chauffeur image: Damian B Oh, CC BY-SA 4.0.
+        </p>
       </footer>
     </main>
   );
